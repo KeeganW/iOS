@@ -28,7 +28,6 @@ class PinPadViewController: UIViewController {
             button.addTarget(self, action: Selector("pinButtonPressed:"), forControlEvents: UIControlEvents.TouchUpOutside)
             button.addTarget(self, action: Selector("pinButtonReleased:"), forControlEvents: UIControlEvents.TouchUpInside)
         }
-        
     }
     
     /*
@@ -51,35 +50,38 @@ class PinPadViewController: UIViewController {
         // Check if the user has inputed the correct code, incoorect code
         // or is still inputing
         if (userEntry == entryValue) {
-            validEntry()
+            entryCircles.setNeedsDisplay()
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("completePinPad"), userInfo: nil, repeats: false)
         }
         else if (countElements(userEntry) == countElements(entryValue)){
-            invalidEntry()
+            animateShake()
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.42, target: self, selector: Selector("reset"), userInfo: nil, repeats: false)
         }
-        entryCircles.setNeedsDisplay() // Redraw button display
-        button.setNeedsDisplay() // Redraw button 
+        entryCircles.setNeedsDisplay() // Redraw circles display
+        button.setNeedsDisplay() // Redraw button
         
     }
     
-    func validEntry(){
-        entryCircles.setNeedsDisplay()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector(), userInfo: nil, repeats: false)
-        
+    /*
+    To continue onto the next view
+    */
+    func completePinPad(){
         self.performSegueWithIdentifier("correctPasscode", sender: nil)
     }
     
+    /*
+    Reset values for various things
+    */
     func reset (){
         entryCircles.enteredNumbers = 0
         entryCircles.setNeedsDisplay()
         userEntry = ""
     }
     
-    func invalidEntry(){
-        //
-        animateShake()
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.42, target: self, selector: Selector("reset"), userInfo: nil, repeats: false)
-    }
-    
+    /*
+    A short animation to simulate the shake that iOS preforms when you
+        enter the incorrect value
+    */
     func animateShake(){
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07

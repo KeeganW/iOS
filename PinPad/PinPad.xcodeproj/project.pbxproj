@@ -16,6 +16,7 @@
 		BF814B361ACC61A2009AF627 /* PinPadCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF814B351ACC61A2009AF627 /* PinPadCircleButton.swift */; };
 		BF814B3A1ACC8C40009AF627 /* PinPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF814B391ACC8C40009AF627 /* PinPadViewController.swift */; };
 		BF8CCE971ACCBC84009CB131 /* PinPadEntryCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CCE961ACCBC84009CB131 /* PinPadEntryCircles.swift */; };
+		BF9AAAB51AD06884003F5AB9 /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF9AAAB41AD06884003F5AB9 /* Background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		BF814B351ACC61A2009AF627 /* PinPadCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPadCircleButton.swift; sourceTree = SOURCE_ROOT; };
 		BF814B391ACC8C40009AF627 /* PinPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPadViewController.swift; sourceTree = "<group>"; };
 		BF8CCE961ACCBC84009CB131 /* PinPadEntryCircles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPadEntryCircles.swift; sourceTree = "<group>"; };
+		BF9AAAB41AD06884003F5AB9 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		BF4FFF521ACC54C600C93660 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF9AAAB41AD06884003F5AB9 /* Background.jpg */,
 				BF4FFF531ACC54C600C93660 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4FFF5A1ACC54C600C93660 /* Main.storyboard in Resources */,
+				BF9AAAB51AD06884003F5AB9 /* Background.jpg in Resources */,
 				BF4FFF5F1ACC54C600C93660 /* LaunchScreen.xib in Resources */,
 				BF4FFF5C1ACC54C600C93660 /* Images.xcassets in Resources */,
 			);

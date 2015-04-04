@@ -16,9 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ALn-wp-IQg">
+                                <rect key="frame" x="-220" y="-463" width="1040" height="1526"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1526" id="dFs-eR-Rnc"/>
+                                    <constraint firstAttribute="width" constant="1040" id="g3Q-69-Qwc"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.74999999999999978" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-xO-n7U">
+                                <rect key="frame" x="-220" y="-463" width="1040" height="1526"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1526" id="Myg-F9-Q4D"/>
+                                    <constraint firstAttribute="width" constant="1040" id="yBb-sU-Af7"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHv-PR-d0o" customClass="PinPadEntryCircles" customModule="PinPad" customModuleProvider="target">
                                 <rect key="frame" x="170" y="117" width="261" height="13"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13" id="Sak-nu-N9i"/>
                                     <constraint firstAttribute="width" constant="261" id="q0c-FL-s0H"/>
@@ -185,7 +200,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bUa-Oe-nPJ" firstAttribute="top" secondItem="fpx-X9-hu3" secondAttribute="bottom" constant="15" id="0MU-i4-TeF"/>
                             <constraint firstAttribute="centerX" secondItem="RHv-PR-d0o" secondAttribute="centerX" constant="-0.5" id="1Ro-T4-WPw"/>
@@ -200,13 +215,17 @@
                             <constraint firstAttribute="centerX" secondItem="fpx-X9-hu3" secondAttribute="centerX" id="KB4-h5-tlf"/>
                             <constraint firstItem="X3N-SF-lgY" firstAttribute="leading" secondItem="bUa-Oe-nPJ" secondAttribute="trailing" constant="15" id="Keg-he-WuU"/>
                             <constraint firstAttribute="centerX" secondItem="p5E-KR-w5s" secondAttribute="centerX" id="Nlz-eW-QOF"/>
+                            <constraint firstAttribute="centerY" secondItem="ALn-wp-IQg" secondAttribute="centerY" id="O2t-nc-uja"/>
+                            <constraint firstAttribute="centerX" secondItem="cuY-xO-n7U" secondAttribute="centerX" id="POb-0L-Clg"/>
                             <constraint firstAttribute="centerY" secondItem="Mol-ln-PPb" secondAttribute="centerY" constant="87" id="QRd-Vu-O7d"/>
+                            <constraint firstAttribute="centerX" secondItem="ALn-wp-IQg" secondAttribute="centerX" id="Qis-yB-HrQ"/>
                             <constraint firstItem="bUa-Oe-nPJ" firstAttribute="leading" secondItem="BBt-cM-lyx" secondAttribute="trailing" constant="15" id="Sm9-0o-lJu"/>
                             <constraint firstItem="oi6-MJ-eDT" firstAttribute="top" secondItem="bUa-Oe-nPJ" secondAttribute="bottom" constant="15" id="VQp-bq-rGD"/>
                             <constraint firstAttribute="centerX" secondItem="cxI-BJ-6Ph" secondAttribute="centerX" constant="-95" id="WNY-8p-iJG"/>
                             <constraint firstItem="fpx-X9-hu3" firstAttribute="leading" secondItem="Mol-ln-PPb" secondAttribute="trailing" constant="15" id="WYW-Yi-7uA"/>
                             <constraint firstItem="XZF-MR-0Z3" firstAttribute="top" secondItem="BBt-cM-lyx" secondAttribute="bottom" constant="15" id="cpB-c0-F0e"/>
                             <constraint firstAttribute="centerY" secondItem="p5E-KR-w5s" secondAttribute="centerY" constant="-198" id="eDF-FP-8bt"/>
+                            <constraint firstAttribute="centerY" secondItem="cuY-xO-n7U" secondAttribute="centerY" id="efI-aR-4OX"/>
                             <constraint firstItem="X3N-SF-lgY" firstAttribute="top" secondItem="cxI-BJ-6Ph" secondAttribute="bottom" constant="15" id="fVP-au-GaM"/>
                             <constraint firstItem="BBt-cM-lyx" firstAttribute="top" secondItem="Mol-ln-PPb" secondAttribute="bottom" constant="15" id="gcE-on-Tub"/>
                             <constraint firstItem="p5E-KR-w5s" firstAttribute="top" secondItem="oi6-MJ-eDT" secondAttribute="bottom" constant="15" id="upx-p7-MRf"/>
@@ -265,4 +284,7 @@
             <point key="canvasLocation" x="1043" y="357"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background.jpg" width="1040" height="1526"/>
+    </resources>
 </document>
