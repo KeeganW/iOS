@@ -50,6 +50,10 @@ class PinPadViewController: UIViewController {
             userEntry.removeAtIndex(userEntry.endIndex.predecessor())
             entryCircles.enteredNumbers -= 1
             entryCircles.setNeedsDisplay()
+            
+            if (countElements(userEntry) == 0){
+                deleteButton.enabled = false
+            }
         }
         
     }
@@ -70,6 +74,9 @@ class PinPadViewController: UIViewController {
         let buttonValue: String = button.titleLabel!.text!
         userEntry = userEntry + buttonValue
         entryCircles.enteredNumbers += 1
+        
+        // Enable delete button
+        deleteButton.enabled = true
         
         // Check if the user has inputed the correct code, incoorect code
         // or is still inputing
@@ -100,6 +107,7 @@ class PinPadViewController: UIViewController {
         entryCircles.enteredNumbers = 0
         entryCircles.setNeedsDisplay()
         userEntry = ""
+        deleteButton.enabled = false
     }
     
     /*
