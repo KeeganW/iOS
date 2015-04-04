@@ -10,24 +10,48 @@ import UIKit
 
 class PinPadViewController: UIViewController {
     
-    var userEntry: String = ""
-    let entryValue: String = "0000"
     
+    var entryValue: String = "0000" // Passcode string
+    // Should be a let, but error checking means is must be a var
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var entryCircles: PinPadEntryCircles!
-    @IBOutlet weak var PinPadTitle: UILabel!
-    
+    @IBOutlet weak var pinPadTitle: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet var pinButtons: [PinPadCircleButton]!
     
+    var userEntry: String = ""
     var timer: NSTimer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set the size of the entry, and redraw
+        if(countElements(entryValue) > 7){
+            // Your passcode can only be 7 numbers in length!
+            entryValue = String(NSString(string: entryValue).substringWithRange(NSRange(location: 0, length: 7)))
+        }
+        entryCircles.numberOfCircles = Double(countElements(entryValue))
+        entryCircles.setNeedsDisplay()
+        
         // Add touch controls to all buttons
         for button in pinButtons{
             button.addTarget(self, action: Selector("pinButtonPressed:"), forControlEvents: UIControlEvents.TouchDown)
             button.addTarget(self, action: Selector("pinButtonPressed:"), forControlEvents: UIControlEvents.TouchUpOutside)
             button.addTarget(self, action: Selector("pinButtonReleased:"), forControlEvents: UIControlEvents.TouchUpInside)
         }
+        deleteButton.addTarget(self, action: Selector("deleteOne:"), forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    /*
+    Called when the button needs to be redrawn
+    */
+    func deleteOne(button: UIButton) {
+        if(countElements(userEntry) > 0){
+            userEntry.removeAtIndex(userEntry.endIndex.predecessor())
+            entryCircles.enteredNumbers -= 1
+            entryCircles.setNeedsDisplay()
+        }
+        
     }
     
     /*
