@@ -43,7 +43,7 @@ class PinPadViewController: UIViewController {
     }
     
     /*
-    Called when the button needs to be redrawn
+    Called when the delete button is pressed
     */
     func deleteOne(button: UIButton) {
         if(countElements(userEntry) > 0){

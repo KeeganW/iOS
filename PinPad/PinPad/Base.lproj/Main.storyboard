@@ -23,14 +23,6 @@
                                     <constraint firstAttribute="width" constant="1040" id="g3Q-69-Qwc"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.74999999999999978" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-xO-n7U" userLabel="Blur Overlay View">
-                                <rect key="frame" x="-220" y="-463" width="1040" height="1526"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1526" id="Myg-F9-Q4D"/>
-                                    <constraint firstAttribute="width" constant="1040" id="yBb-sU-Af7"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHv-PR-d0o" customClass="PinPadEntryCircles" customModule="PinPad" customModuleProvider="target">
                                 <rect key="frame" x="170" y="117" width="261" height="13"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -200,10 +192,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-UJ-Xwl">
-                                <rect key="frame" x="373" y="483" width="44" height="30"/>
+                                <rect key="frame" x="364" y="467" width="62" height="62"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XPa-lA-6DG"/>
-                                    <constraint firstAttribute="width" constant="44" id="yZ5-gE-ukM"/>
+                                    <constraint firstAttribute="height" constant="62" id="XPa-lA-6DG"/>
+                                    <constraint firstAttribute="width" constant="62" id="yZ5-gE-ukM"/>
                                 </constraints>
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -213,6 +205,14 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view alpha="0.59999999999999964" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-xO-n7U" userLabel="Blur Overlay View">
+                                <rect key="frame" x="-220" y="-463" width="1040" height="1526"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1526" id="Myg-F9-Q4D"/>
+                                    <constraint firstAttribute="width" constant="1040" id="yBb-sU-Af7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -237,13 +237,13 @@
                             <constraint firstItem="oi6-MJ-eDT" firstAttribute="top" secondItem="bUa-Oe-nPJ" secondAttribute="bottom" constant="15" id="VQp-bq-rGD"/>
                             <constraint firstAttribute="centerX" secondItem="cxI-BJ-6Ph" secondAttribute="centerX" constant="-95" id="WNY-8p-iJG"/>
                             <constraint firstItem="fpx-X9-hu3" firstAttribute="leading" secondItem="Mol-ln-PPb" secondAttribute="trailing" constant="15" id="WYW-Yi-7uA"/>
-                            <constraint firstItem="MdN-UJ-Xwl" firstAttribute="top" secondItem="wVf-6W-mFb" secondAttribute="bottom" constant="40" id="c3y-Hy-kI8"/>
+                            <constraint firstItem="MdN-UJ-Xwl" firstAttribute="top" secondItem="wVf-6W-mFb" secondAttribute="bottom" constant="24" id="c3y-Hy-kI8"/>
                             <constraint firstItem="XZF-MR-0Z3" firstAttribute="top" secondItem="BBt-cM-lyx" secondAttribute="bottom" constant="15" id="cpB-c0-F0e"/>
                             <constraint firstAttribute="centerY" secondItem="p5E-KR-w5s" secondAttribute="centerY" constant="-198" id="eDF-FP-8bt"/>
                             <constraint firstAttribute="centerY" secondItem="cuY-xO-n7U" secondAttribute="centerY" id="efI-aR-4OX"/>
                             <constraint firstItem="X3N-SF-lgY" firstAttribute="top" secondItem="cxI-BJ-6Ph" secondAttribute="bottom" constant="15" id="fVP-au-GaM"/>
                             <constraint firstItem="BBt-cM-lyx" firstAttribute="top" secondItem="Mol-ln-PPb" secondAttribute="bottom" constant="15" id="gcE-on-Tub"/>
-                            <constraint firstItem="MdN-UJ-Xwl" firstAttribute="leading" secondItem="p5E-KR-w5s" secondAttribute="trailing" constant="33" id="hZb-n3-u9G"/>
+                            <constraint firstItem="MdN-UJ-Xwl" firstAttribute="leading" secondItem="p5E-KR-w5s" secondAttribute="trailing" constant="24" id="hZb-n3-u9G"/>
                             <constraint firstItem="p5E-KR-w5s" firstAttribute="top" secondItem="oi6-MJ-eDT" secondAttribute="bottom" constant="15" id="upx-p7-MRf"/>
                             <constraint firstItem="wVf-6W-mFb" firstAttribute="leading" secondItem="oi6-MJ-eDT" secondAttribute="trailing" constant="15" id="uzh-m4-vJm"/>
                             <constraint firstAttribute="centerX" secondItem="oi6-MJ-eDT" secondAttribute="centerX" id="v0L-23-Qra"/>
